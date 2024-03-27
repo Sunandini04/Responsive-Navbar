@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #020d46;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar {
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+}
+
+.left h1 {
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.checkBtn {
+    cursor: pointer;
+    font-size: 30px;
+    color: #ed1e79;
+}
+
+.right .list {
+    display: flex;
+    list-style: none;
+}
+
+.right .list li a {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.right .list li a:hover {
+    background-color: #fff;
+    border-radius: 7px;
+    color: rgb(22, 7, 36);
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width: 805px) {
+    .right .list {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background-color: rgb(22, 7, 36);
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .right .list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .checkBtn {
+        display: block;
+    }
+
+    #check:checked ~ .right .list {
+        left: 0;
+    }
+}
